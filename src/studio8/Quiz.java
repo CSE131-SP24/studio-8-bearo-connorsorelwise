@@ -26,8 +26,12 @@ public class Quiz {
 	}
 	
 	public void takeQuiz() {
-		//FIXME
-	}
+		for(int i = 0; i < this.questions.length; i++){
+			questions[i].displayPrompt();
+			questions[i].checkAnswer(getUserAnswer());
+			questions[i].getPoints();
+		}
+		}
 	
 	public static void main(String[] args) {
 		Question q = new Question("What number studio is this?", "8", 2);
